@@ -434,9 +434,54 @@ a:hover { text-decoration: underline; }
 ========================= */
 @media (max-width: 900px){
   .grid{ grid-template-columns: 1fr; }
-  .hero-card{ grid-template-columns: 1fr; }
+  .hero{ padding: 1.6rem 0 2rem; }
+  .hero-card{
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: .95rem;
+  }
   .release-list .hero-card:nth-child(even) .hero-cover{ order: 0; }
-  .nav{ gap: .85rem; font-size: .85rem; }
+  .hero-cover{
+    width: min(100%, 240px);
+    min-height: 0;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+  }
+  .btn-row{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .55rem;
+  }
+  .btn{
+    text-align: center;
+    font-size: .86rem;
+    padding: .68rem .72rem;
+  }
+  .hero-desc{ max-width: none; }
+  .header-row{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .nav{
+    gap: .85rem;
+    font-size: .85rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .footer-row{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .35rem;
+  }
+}
+
+@media (max-width: 520px){
+  .wrap{ width: min(1120px, calc(100% - 1.2rem)); }
+  .glitch{ font-size: clamp(2rem, 10vw, 2.6rem); }
+  .hero-sub{ font-size: .85rem; }
+  .hero-title{ font-size: 1.08rem; }
+  .btn-row{ grid-template-columns: 1fr; }
+  .section{ padding: 1.7rem 0; }
 }
 
 @media (prefers-reduced-motion: reduce){
