@@ -194,6 +194,11 @@ a:hover { text-decoration: underline; }
   gap: 1rem;
 }
 
+.visuals-list{
+  display: grid;
+  gap: 1rem;
+}
+
 .release-list .hero-card:nth-child(even){
   grid-template-columns: 1fr 260px;
 }
