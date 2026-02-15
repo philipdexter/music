@@ -440,6 +440,7 @@ a:hover { text-decoration: underline; }
     gap: 1rem;
     padding: .95rem;
   }
+  .release-list .hero-card:nth-child(even){ grid-template-columns: 1fr; }
   .release-list .hero-card:nth-child(even) .hero-cover{ order: 0; }
   .hero-cover{
     width: min(100%, 240px);
