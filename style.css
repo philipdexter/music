@@ -189,6 +189,19 @@ a:hover { text-decoration: underline; }
   box-shadow: 0 0 0 1px rgba(255,255,255,.05) inset;
 }
 
+.release-list{
+  display: grid;
+  gap: 1rem;
+}
+
+.release-list .hero-card:nth-child(even){
+  grid-template-columns: 1fr 260px;
+}
+
+.release-list .hero-card:nth-child(even) .hero-cover{
+  order: 2;
+}
+
 .hero-cover{
   position: relative;
   border-radius: 8px;
@@ -422,6 +435,7 @@ a:hover { text-decoration: underline; }
 @media (max-width: 900px){
   .grid{ grid-template-columns: 1fr; }
   .hero-card{ grid-template-columns: 1fr; }
+  .release-list .hero-card:nth-child(even) .hero-cover{ order: 0; }
   .nav{ gap: .85rem; font-size: .85rem; }
 }
 
